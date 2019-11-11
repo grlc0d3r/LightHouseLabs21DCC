@@ -1,0 +1,17 @@
+const busTimes = buses => 
+{
+  var numberOfBuses = Object.keys(buses).length;
+
+
+  // Object.keys = looks like it just returns the KEY instead of the value so it'll count the # of objects in buses and return that length
+
+  for (var i = 0; i < numberOfBuses; i++)
+  {
+    route = Object.keys(buses)[i];
+    // so to access an object's properties the way you would access an array you use
+    arrival = buses[route].distance / buses[route].speed;
+    buses[route] = arrival;
+  }
+
+  return(buses);
+};
